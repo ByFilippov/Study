@@ -1,0 +1,28 @@
+body {
+    transition: .1s all ease;
+    background-color: #232236;
+    color: #fefefe;
+}
+
+.dark__block {
+    transition: .1s all ease;
+    background-color: #e4ddff;
+    color: #232236;
+    border: 1px solid #232236;
+}
+
+.block,
+.age__block {
+    border: 1px solid #fefefe;
+}
+
+.days__holder {
+    color: #acb1ff;
+}
+
+.cats__flex__box img {
+    margin: 10px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(60, 50, 50, 0.56);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(60, 50, 50, 0.56);
+    box-shadow: 0px 0px 10px 0px rgba(129, 108, 108, 0.56);
+}
