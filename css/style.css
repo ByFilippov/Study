@@ -10,7 +10,7 @@ body {
 }
 .container {
   max-width: 50%;
-  min-width: 330px;
+  min-width: 320px;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -69,7 +69,7 @@ input:checked[type="checkbox"]::before {
 }
 /* Age */
 .age__block {
-  min-width: 330px;
+  min-width: 320px;
   margin: 0 auto;
   text-align: center;
   margin-top: 5px;
@@ -110,7 +110,7 @@ input:checked[type="checkbox"]::before {
 }
 /* cats! */
 .block {
-  min-width: 330px;
+  min-width: 320px;
   margin: 0 auto;
   text-align: center;
   margin-top: 5px;
@@ -178,6 +178,11 @@ input:checked[type="checkbox"]::before {
 @media (max-width: 500px) {
   .container {
     max-width: 100%;
+    margin-top: 5px;
+  }
+  .block,
+  .age__block {
+    margin: 2.5px 5px;
   }
   .rock__block img {
     width: 70px;
@@ -187,6 +192,9 @@ input:checked[type="checkbox"]::before {
     margin-top: 30px;
   }
   .cats__flex__box img {
-    max-width: 330px;
+    max-width: 320px;
+  }
+  .block:last-child {
+    margin: 2.5px 5px 30px 5px;
   }
 }
