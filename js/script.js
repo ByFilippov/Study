@@ -112,18 +112,17 @@ function upsFontEnd(humanImageChoise, computerImageChoise, message) {
     var button = document.createElement('a'); // button
     button.setAttribute('id', 'rock__button');
     button.setAttribute('class', 'button');
-    button.href = "#";
     button.setAttribute('onclick', 'rpsReset()')
     button.innerHTML = "Reset";
 
-    humanDiv.innerHTML = "<img onclick='rpsReset()' src='" + imgData[humanImageChoise] + "' height='150' width='150' style='outline: 3px solid #61e25d; box-shadow: 0px 0px 18px 0px rgba(111, 187, 75, 0.56)'>";
+    humanDiv.innerHTML = "<img onclick='rpsReset()' src='" + imgData[humanImageChoise] + "' style='outline: 3px solid #61e25d; box-shadow: 0px 0px 18px 0px rgba(111, 187, 75, 0.56)'>";
     document.getElementById('result__block').appendChild(humanDiv);
 
     messageDiv.innerHTML = "<h1 style='color:" + message.color + "; padding-top: 10px;'>" + message.message + "</h1>";
     document.getElementById('result__block').appendChild(messageDiv);
     document.getElementById('rock__text').appendChild(button)
 
-    botDiv.innerHTML = "<img onclick='rpsReset()' src='" + imgData[computerImageChoise] + "' height='150' width='150' style='outline: 2px solid rgb(175, 41, 135); box-shadow: 0px 0px 18px 0px rgba(112, 62, 119, 0.56);'>"; 
+    botDiv.innerHTML = "<img id='computer__choise' onclick='rpsReset()' src='" + imgData[computerImageChoise] + "' style='outline: 2px solid rgb(175, 41, 135); box-shadow: 0px 0px 18px 0px rgba(112, 62, 119, 0.56);'>"; 
     document.getElementById('result__block').appendChild(botDiv);
 }
 

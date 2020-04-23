@@ -19,14 +19,14 @@
         <div class="age__block">
             <h1>Your Age in Days</h1>
             <div class="days__holder"><h3 id="your__days"></h3></div>
-            <a onclick="yearsInDays()" href="#" class="button blue__button" id="age__click">Click Me</a>
-            <a onclick="reset()" href="#" class="button red__button" id="age__reset">Reset</a>
+            <a onclick="yearsInDays()" class="button blue__button" id="age__click">Click Me</a>
+            <a onclick="reset()" class="button red__button" id="age__reset">Reset</a>
         </div>
 
         <div class="block">
             <h1>Cats cats cats...</h1>
-            <a href="#" onclick="cat__gen()" class="button green__button" id="cat__gen">Generate One!</a>
-            <a href="#" onclick="cat__cleaner()" class="button red__button" id="cat__clean">Clean One!</a>   
+            <a onclick="cat__gen()" class="button green__button" id="cat__gen">Generate One!</a>
+            <a onclick="cat__cleaner()" class="button red__button" id="cat__clean">Clean One!</a>   
             <div class="cats__flex__box" id="cat__hood">
 
             </div> 
@@ -35,9 +35,9 @@
         <div class="block" id="rock__box">
             <h1>Rock, Paper, Scissors</h1>
             <div class="flex__box rock__block" id="block__flex">
-                <img alt="rock" onclick="rpsGame(this)" id="rock" width="150" height="150" src="img/rock.jpg">
-                <img alt="paper" onclick="rpsGame(this)" id="paper" width="150" height="150" src="img/paper.png">
-                <img alt="scissors" onclick="rpsGame(this)" id="scissors" width="150" height="150" src="img/scissors.jpg">
+                <img alt="rock" onclick="rpsGame(this)" id="rock" src="img/rock.jpg">
+                <img alt="paper" onclick="rpsGame(this)" id="paper" src="img/paper.png">
+                <img alt="scissors" onclick="rpsGame(this)" id="scissors" src="img/scissors.jpg">
             </div>
         </div>
 
@@ -45,15 +45,15 @@
             <h1>Change the Color</h1>
             <div class="flex__box" id="buttons__block">
                     <select class="select__color" name="backdrop" id="background"  onchange="buttonColorChange(this)">
-                        <option value="reset">reset</option>
+                        <option value="reset">none</option>
                         <option value="random">random</option>
                         <option value="red">red</option>
                         <option value="green">green</option>
                     </select>
-                <a href="#" class="button blue__button">Wee!</a>
-                <a href="#" class="button yellow__button">Yahoo!</a>
-                <a href="#" class="button red__button">Google!</a>
-                <a href="#" class="button green__button" >Facebook!</a>
+                <a class="button blue__button">Wee!</a>
+                <a class="button yellow__button">Yahoo!</a>
+                <a class="button red__button">Google!</a>
+                <a class="button green__button" >Facebook!</a>
             </div>
         </div>
     </div>

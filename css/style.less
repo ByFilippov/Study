@@ -1,5 +1,5 @@
 @width: 50%;
-@blocks__width: 577px;
+@blocks__width: 330px;
 
 * {
     margin: 0;
@@ -21,6 +21,10 @@ body {
 }
 
 /* Dark Theme */
+
+#dark__toggle__block {
+    width: 100%;
+}
 
 input[type="checkbox"] {
     font-size: 20px;
@@ -105,8 +109,9 @@ input:checked[type="checkbox"]::before {
     border-radius: 10px;
     text-decoration: none;
     color: #fff;
-    margin-right: 20px;
+    margin: 5px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -167,6 +172,8 @@ input:checked[type="checkbox"]::before {
 .rock__block img {
     cursor: pointer;
     margin: 0 10px;
+    width: 150px;
+    height: 150px;
 }
 
 .rock__block img:hover {
@@ -177,6 +184,7 @@ input:checked[type="checkbox"]::before {
 .flex__box {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #result__block div{
@@ -188,16 +196,36 @@ input:checked[type="checkbox"]::before {
 // buttons 
 .select__color {
     height: 39px;
-    width: 90px;
+    width: 82px;
     font-size: 14px;
     border-radius: 10px;
     padding-left: 10px;
-    background-color: #232236;
+    background-color: #625f8f;
     color: #fefefe;
-    margin-right: 20px;
     outline: none;
+    cursor: pointer;
+    margin: 5px;
 }
 
 .yellow__button {
     background-color: #dbbb39;
+}
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .rock__block img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #computer__choise {
+        margin-top: 30px;
+    }
+
+    .cats__flex__box img {
+        max-width: @blocks__width;
+    }
 }
