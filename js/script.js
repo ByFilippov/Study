@@ -204,6 +204,8 @@ let blackjackGame = {
     'draws': 0
 }
 
+
+
 const YOU = blackjackGame['you'];
 const DEALER = blackjackGame['dealer'];
 
@@ -232,6 +234,10 @@ function deactiveStandButton() {
 function deactiveHitButton() {
     document.querySelector('#blackjack__hit__button').classList.add('not__active__button');
     document.querySelector('#blackjack__hit__button').style.cursor = 'default';
+}
+
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 var standCursor = document.querySelector('#blackjack__stand__button').style.cursor; 
@@ -275,24 +281,23 @@ function standButton() {
             dealerLogic();
             deactiveStandButton();
             deactiveHitButton();
-            
-            document.querySelector('#blackjack__deal__button').classList.remove('not__active__button');
-            document.querySelector('#blackjack__deal__button').style.cursor = 'pointer';
         }
     // }
 }
 
-function dealerLogic(){
+async function dealerLogic(){
     while (DEALER['score'] <= 15){
         let card = randomCard();
         showCard(card, DEALER);
         updateScore(card, DEALER);
         showScore(DEALER);
+        await sleep(500);
     }
 
-    if (DEALER['score'] > 15){
-        blackMessageOutput(blackCheckWin());     
-    }
+    document.querySelector('#blackjack__deal__button').classList.remove('not__active__button');
+    document.querySelector('#blackjack__deal__button').style.cursor = 'pointer';
+
+    blackMessageOutput(blackCheckWin());     
 }
 
 function randomCard(){
@@ -301,7 +306,9 @@ function randomCard(){
 }
 
 function dealButton() {
-    if (DEALER['score'] > 0) {
+    var blackjackStatus = document.querySelector('#blackjack__status').textContent;
+    
+    if (blackjackStatus != "Let's play!") {
         blackjackRemove();
         deactivDealButton()
         standCount = 0;
