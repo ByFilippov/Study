@@ -11,11 +11,14 @@ if (localStorage.length > 0){
         setThemeHeader(1);
     }
 } else {
+    setThemeHeader(1);
     localStorage.setItem("numberOfToggle", 0); //create 0
-}
+};
 numLocal = Number(localStorage.getItem("numberOfToggle")); //local > int
 
 function darkTheme() {
+    let blackjackStatus = document.querySelector('#blackjack__status').textContent;
+    
     if (numLocal == 0) {
         localStorage.setItem("numberOfToggle", 1);
         numLocal = 1;
@@ -26,11 +29,23 @@ function darkTheme() {
     // localStorage.clear;
     // localStorage
 
+    console.log(blackjackStatus);
+
     if (numLocal % 2 != 0){
         darkLink.href = 'css/dark.css';
+
+        if (blackjackStatus == "Let's play!" || blackjackStatus == "You Drew!"){
+            document.querySelector('#blackjack__status').style.color = '#fefefe';
+        }
+
         setThemeHeader(0);
     } else {
         darkLink.href = ' ';
+
+        if (blackjackStatus == "Let's play!" || blackjackStatus == "You Drew!"){
+            document.querySelector('#blackjack__status').style.color = '#232236';
+        }
+
         setThemeHeader(1);
     }
 }

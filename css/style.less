@@ -118,9 +118,6 @@ input:checked[type="checkbox"]::before {
     color: rgb(241, 241, 241);
 }
 
-.button:last-child {
-    margin-right: 0;
-}
 
 .blue__button {
     background-color: rgb(39, 77, 182);
@@ -147,7 +144,7 @@ input:checked[type="checkbox"]::before {
 }
 
 .green__button {
-    background: rgb(54, 218, 90);
+    background: #36da5a;
 }
 
 .cats__flex__box {
@@ -185,6 +182,7 @@ input:checked[type="checkbox"]::before {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 #result__block div{
@@ -211,7 +209,81 @@ input:checked[type="checkbox"]::before {
     background-color: #dbbb39;
 }
 
-@media (max-width: 500px) {
+/* Blackjack */
+.blackjack h1{
+    margin-bottom: 10px;
+}
+
+.blackjack h2{
+    font-weight: 400;
+}
+
+.blackjack__box {
+    background-color: #2a772e;
+    color: #fefefe;
+    border-radius: 20px;
+    transition: .1s all ease;
+
+    width: 100%;
+    min-height: 450px;
+    margin-top: 30px;
+    margin-bottom: -70px;
+}
+
+.your__box,
+.dealer__box {
+    min-height: 350px;
+    padding-top: 20px;
+    border: 1px solid #232236;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.card__block {
+    width: 88.8px;
+    height: 129.2px;
+    display: inline-flex;
+    margin: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px 0px rgba(29, 29, 29, 0.56);  
+}
+
+.your__box img,
+.dealer__box img{
+    width: 88.8px;
+    height: 129.2px;
+    border-radius: 10px;
+}
+
+.buttons__box {
+    height: 50px;
+    padding-top: 15px;
+}
+
+.blackjack__score {
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 70px;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.not__active__button {
+    opacity: .3;
+    color: rgb(241, 241, 241);
+}
+  
+
+/* Media */
+@media (max-width: 1040px) {
     .container {
         max-width: 100%;
         margin-top: 5px;
@@ -232,11 +304,25 @@ input:checked[type="checkbox"]::before {
     }
 
     .cats__flex__box img {
-        max-width: @blocks__width;
+        max-width: 43%;
     }
 
-    .block:last-child {
-        
+    .block:last-child {        
         margin: 2.5px 5px 30px 5px;
     }
+
+    .your__box h2,
+    .dealer__box h2 {
+        font-size: 1em;
+    }
+    
+    .card__block{
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .card__block:nth-child(n+3) {
+        margin-top: -(129.2px - 50px);
+    }
+
 }

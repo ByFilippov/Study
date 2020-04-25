@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link id="dark__link" rel="stylesheet">
+    <link id="dark__link" href=" " rel="stylesheet">
     <title>Java Test</title>
 </head>
 <body>
@@ -14,7 +14,6 @@
             <h1 id="theme__header"></h1>
             <div id="dark__toggle__block"><input type="checkbox" onclick="darkTheme()"></div>
         </div>
-        <script src="js/darkTheme.js"></script>
 
         <div class="age__block">
             <h1>Your Age in Days</h1>
@@ -56,8 +55,45 @@
                 <a class="button green__button" >Facebook!</a>
             </div>
         </div>
+
+        <div class="block blackjack">
+            <h1>Blackjack</h1>
+            <h2><span id="blackjack__status">Let's play!</span></Let></h2>
+            
+            <div class="blackjack__box">
+                <div class="flex__box">
+                    <div class="your__box" id="your__box">
+                    <h2>You: <span id="your__blackjack__score">0</span></h2>
+                    </div>
+                    <div class="dealer__box" id="dealer__box">
+                        <h2>Dealer: <span id="dealer__blackjack__score">0</span></h2>
+                    </div>
+                </div>
+                <div class="buttons__box">
+                    <a class="button blue__button" id="blackjack__hit__button">Hit</a>
+                    <a class="button yellow__button" id="blackjack__stand__button"> Stand</a>
+                    <a class="button red__button" id="blackjack__deal__button">Deal</a>
+                </div>
+            </div>
+            
+            <div class="blackjack__table flex__box">
+                <table>
+                    <tr>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Draws</th>
+                    </tr>
+                    <tr>
+                        <td><span id="blackjack__wins">0</span></td>
+                        <td><span id="blackjack__losses">0</span></td>
+                        <td><span id="blackjack__draws">0</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 
     <script src="js/script.js"></script>
+    <script src="js/darkTheme.js"></script>
 </body>
 </html>

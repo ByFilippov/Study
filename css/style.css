@@ -98,9 +98,6 @@ input:checked[type="checkbox"]::before {
 .button:hover {
   color: #f1f1f1;
 }
-.button:last-child {
-  margin-right: 0;
-}
 .blue__button {
   background-color: #274db6;
 }
@@ -154,6 +151,7 @@ input:checked[type="checkbox"]::before {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 10px;
 }
 #result__block div {
   width: 200px;
@@ -175,7 +173,68 @@ input:checked[type="checkbox"]::before {
 .yellow__button {
   background-color: #dbbb39;
 }
-@media (max-width: 500px) {
+/* Blackjack */
+.blackjack h1 {
+  margin-bottom: 10px;
+}
+.blackjack h2 {
+  font-weight: 400;
+}
+.blackjack__box {
+  background-color: #2a772e;
+  color: #fefefe;
+  border-radius: 20px;
+  transition: 0.1s all ease;
+  width: 100%;
+  min-height: 450px;
+  margin-top: 30px;
+  margin-bottom: -70px;
+}
+.your__box,
+.dealer__box {
+  min-height: 350px;
+  padding-top: 20px;
+  border: 1px solid #232236;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+.card__block {
+  width: 88.8px;
+  height: 129.2px;
+  display: inline-flex;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px 0px rgba(29, 29, 29, 0.56);
+}
+.your__box img,
+.dealer__box img {
+  width: 88.8px;
+  height: 129.2px;
+  border-radius: 10px;
+}
+.buttons__box {
+  height: 50px;
+  padding-top: 15px;
+}
+.blackjack__score {
+  margin-top: 20px;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 70px;
+}
+th,
+td {
+  border: 1px solid #000;
+  padding: 5px;
+}
+.not__active__button {
+  opacity: 0.3;
+  color: #f1f1f1;
+}
+/* Media */
+@media (max-width: 1040px) {
   .container {
     max-width: 100%;
     margin-top: 5px;
@@ -192,9 +251,20 @@ input:checked[type="checkbox"]::before {
     margin-top: 30px;
   }
   .cats__flex__box img {
-    max-width: 320px;
+    max-width: 43%;
   }
   .block:last-child {
     margin: 2.5px 5px 30px 5px;
+  }
+  .your__box h2,
+  .dealer__box h2 {
+    font-size: 1em;
+  }
+  .card__block {
+    height: 50px;
+    overflow: hidden;
+  }
+  .card__block:nth-child(n+3) {
+    margin-top: -79.2px;
   }
 }
